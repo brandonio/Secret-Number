@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class SecretNumberDemo {
+    public static final int SECRET_NUMBER = 1234;
+    public static final int SUPER_SECRET_NUMBER = 5678;
+    public static int getIntFromUser (String prompt) {
+        Scanner userScanner = new Scanner(System.in);
+        System.out.println(prompt);
+        int userInt = userScanner.nextInt();
+        return userInt;
+}
+public static void main(String[] args) {
+    System.out.println("----------Program is Starting----------");
+    
+    int userInt = getIntFromUser("What's the secret code?");
+    if (userInt == SECRET_NUMBER) {
+        System.out.println("You got it, dude!");
+        userInt = getIntFromUser("But do you know the super secret number?");
+        if (userInt == SUPER_SECRET_NUMBER) {
+            System.out.println("You got it again, dude!");
+        }
+        else {
+            System.out.println("You got it...WRONG!");
+        }
+   else {
+        System.out.println("You got it...WRONG!");
+    }
+    }
+}
+}
+    
